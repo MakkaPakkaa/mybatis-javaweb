@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hry.dao.UserDao">
+	<!-- 	查询 -->
+	<select id="selectUserByUsername" parameterType="map"
+		resultType = "com.hry.pojo.User">
+		select * from user where username = #{username} 
+	</select>
+	<!-- 	添加 -->
+	<insert id="addUser" parameterType = "com.hry.pojo.User">
+		 insert into user (username,password) values (#{username},#{password})
+	</insert>
+	<!-- 	更新 -->
+	<update id="updateUser" parameterType="com.hry.pojo.User">
+		update user set username=#{username},password=#{password} where username = #{username}
+    </update>
+	<!-- 	删除 -->
+	<delete id="deleteUser" parameterType="com.hry.pojo.User">
+		delete from user where username = #{username}
+	</delete>
+	<!-- 注册 -->
+	<insert id="registerUser" parameterType="com.hry.pojo.User">
+        insert into user (username,password) values (#{username},#{password})
+    </insert>
+	
+</mapper>

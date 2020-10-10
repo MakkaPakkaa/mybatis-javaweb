@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<!-- 指定某个全限定类的别名 -->
+<!-- 	<typeAliases> -->
+<!-- 		<typeAlias type="com.hry.pojo.NewsEntity" alias="NewsEntity"/> -->
+		
+<!-- 	</typeAliases> -->
+	
+
+<!-- 使用自动扫描包来定义别名，别名为包中PoJo类以首字母小写的非限定类名作为别名 -->
+<!-- 	<typeAliases> -->
+<!-- 		<package name="com.hry.po"/> -->
+<!-- 	</typeAliases> -->
+
+
+
+<!-- 配置环境，指定默认的数据库环境id为mysql -->
+<environments default="mysql">
+<!-- 配置id为mysql的数据库环境 -->
+<environment id="mysql">
+<!-- 使用JDBC的事务管理 -->
+<transactionManager type="JDBC"/>
+<!-- 数据库连接池 -->
+<dataSource type="POOLED">
+ <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+ <property name="url" value="jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC"/>
+ <property name="username" value="root"/>
+ <property name="password" value="root"/>
+</dataSource>
+</environment>
+</environments>
+ <mappers>
+<!--  配置映射文件的位置 -->
+
+<!--  <mapper resource="com/hry/mapper/EmployeeMapper.xml"/> -->
+ <mapper resource="com/hry/mapper/UserDaoMapper.xml"/>
+ </mappers>
+</configuration>
