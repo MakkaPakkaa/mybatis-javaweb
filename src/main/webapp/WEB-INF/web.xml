@@ -10,22 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>Addd</display-name>
-    <servlet-name>Addd</servlet-name>
-    <servlet-class>com.hry.servlet.Addd</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Addd</servlet-name>
-    <url-pattern>/Addd</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Ass</display-name>
-    <servlet-name>Ass</servlet-name>
-    <servlet-class>com.hry.servlet.Ass</servlet-class>
-  </servlet>
+  
   <servlet-mapping>
     <servlet-name>Ass</servlet-name>
     <url-pattern>/Ass</url-pattern>
@@ -42,7 +27,6 @@
   </servlet-mapping>
   
   <servlet>
-  
     <display-name>RegistServlet</display-name>
     <servlet-name>RegistServlet</servlet-name>
     <servlet-class>com.hry.servlet.RegistServlet</servlet-class>

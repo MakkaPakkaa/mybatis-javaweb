@@ -59,7 +59,7 @@ public class TestMybatis {
 		  SqlSession sqlSession = MyBatisUtils.getSession();
 		  UserDao userDao = sqlSession.getMapper(UserDao.class);
 		  
-		  User user = new User("王五","123456");
+		  User user = new User("LLL","123456");
 		  int i = userDao.deleteUser(user);
 		  System.out.println("成功删除数为："+i);
 		  
